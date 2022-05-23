@@ -41,8 +41,9 @@ Stampare Nome, Cognome e la media dei voti di ogni alunno.
     for ($i = 0; $i < count($students); $i++) {
         $student =$students[$i];
         $average_grades = array_sum($student['grades']) / count($student['grades']);
+        $integer_grades = round($average_grades);
         //var_dump($average_grades);
         echo "<h1> $student[name] $student[lastname] </h1>";
-        echo "<p> Average grades: $average_grades</p>";
+        echo "<p> Average grades: $integer_grades</p>";
     }
 ?>
